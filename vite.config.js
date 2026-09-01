@@ -5,7 +5,7 @@ import path from 'path'
 
 // 自动导出 JSON 到本地文件系统的中间件
 function autoExportPlugin() {
-  const EXPORT_DIR = 'F:/AppData/WorkBuddy'
+  const EXPORT_DIR = path.resolve(process.cwd(), '.auto-export')
   const EXPORT_FILE = '研究生工作台_自动备份.json'
 
   return {

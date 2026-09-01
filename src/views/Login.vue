@@ -102,7 +102,7 @@ onMounted(() => {
 
 function doLogin() {
   if (!username.value || !password.value) return
-  if (username.value === 'Lian-yz' && password.value === 'Lian-yz666') {
+  if (username.value === 'LIan' && password.value === 'Lian666') {
     // 登录成功：按勾选状态保存
     try {
       if (rememberAccount.value) {
@@ -116,7 +116,7 @@ function doLogin() {
         localStorage.removeItem(K_PASS)
       }
     } catch {}
-    settingsStore.login('Lian-yz')
+    settingsStore.login('LIan')
   } else {
     errorMsg.value = '账号或密码错误，请重试'
     password.value = ''

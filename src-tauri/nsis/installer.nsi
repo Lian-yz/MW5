@@ -68,7 +68,7 @@ ${StrLoc}
 ; ============================================
 ; Custom UI Constants
 ; ============================================
-!define ASSETS_DIR "F:/AppData/TeleAgent/.temp/mw-build/src-tauri/nsis/assets"
+!define ASSETS_DIR "assets"
 !ifndef WS_CHILD
   !define WS_CHILD 0x40000000
 !endif
