@@ -1,0 +1,31 @@
+appId: com.mastersworkbench.app
+productName: 硕士工作台
+copyright: Copyright © 2026
+
+directories:
+  output: release
+  buildResources: build
+
+files:
+  - electron/**/*
+  - dist/**/*
+  - package.json
+
+win:
+  target:
+    - target: portable
+      arch: [x64]
+  artifactName: ${productName}-${version}-portable.${ext}
+  icon: null
+  sign: null
+  signAndEditExecutable: false
+
+portable:
+  artifactName: ${productName}-${version}-portable.${ext}
+
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+
+asar: true
+compression: maximum

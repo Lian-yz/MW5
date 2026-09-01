@@ -1,0 +1,22 @@
+node_modules/
+.DS_Store
+
+# 构建产物（可随时用 npm run build 重新生成，不入库）
+dist/
+dist_*/
+dist-fixed/
+release/
+release_tauri/
+src-tauri/target/
+*.local
+*.exe
+vite.config.js.timestamp-*
+
+# 日志
+npm-debug.log*
+yarn-error.log*
+dev-server.log
+
+# 编辑器
+.vscode/
+.idea/

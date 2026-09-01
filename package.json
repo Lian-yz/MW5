@@ -1,0 +1,41 @@
+{
+  "name": "master-workbench",
+  "version": "5.0.193",
+  "description": "硕士生全维度成长工作台 - 输入执行复盘激励四维闭环",
+  "type": "module",
+  "main": "electron/main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "electron:dev": "concurrently \"vite\" \"wait-on http://localhost:5173 && electron .\"",
+    "electron:build": "vite build && electron-builder --config electron-builder.yml",
+    "electron:pack": "vite build && electron-builder --config electron-builder.yml --dir",
+    "release": "node scripts/create-github-release.cjs"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.11.1",
+    "@tauri-apps/plugin-dialog": "^2.7.2",
+    "@tauri-apps/plugin-fs": "^2.5.1",
+    "@tauri-apps/plugin-shell": "^2.3.5",
+    "dayjs": "^1.11.0",
+    "echarts": "^5.5.0",
+    "http-proxy-agent": "^9.1.0",
+    "katex": "^0.18.3",
+    "lucide-vue-next": "^1.0.0",
+    "pinia": "^2.1.0",
+    "vue": "^3.4.0",
+    "vue-router": "^4.3.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.11.4",
+    "@vitejs/plugin-vue": "^5.0.0",
+    "concurrently": "^8.2.0",
+    "electron": "^33.0.0",
+    "electron-builder": "^25.0.0",
+    "sharp": "^0.35.3",
+    "vite": "^5.4.0",
+    "wait-on": "^7.2.0"
+  }
+}
