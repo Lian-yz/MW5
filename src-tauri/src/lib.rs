@@ -136,8 +136,8 @@ fn open_external(path: String) -> Result<(), String> {
 use std::sync::Mutex;
 
 /// GitHub 仓库信息
-const GITHUB_OWNER: &str = "ThirteenLeef";
-const GITHUB_REPO: &str = "Master-Workbench";
+const GITHUB_OWNER: &str = "Lian-yz";
+const GITHUB_REPO: &str = "MW5";
 
 /// 默认 GitHub Token（编译时硬编码，前端可通过 set_github_token 动态覆盖）
 const DEFAULT_TOKEN: &str = "github_pat_PLACEHOLDER_REPLACED_DO_NOT_USE";
@@ -204,18 +204,17 @@ fn compare_versions(a: &str, b: &str) -> i32 {
 }
 
 /// 从安装包文件名提取版本号
-/// 兼容四种前缀：旧版 "MasterWorkbench_"、新版 "MasterWorkbench 5_"、上传无空格 "MasterWorkbench5_"、
-/// GitHub API 空格被替换为点 "MasterWorkbench.5_"
-/// "MasterWorkbench 5_5.0.232_x64-setup.exe" → "5.0.232"
+/// 当前前缀 "MasterWorkbench_"（无空格无版本后缀），兼容历史旧前缀：
+/// "MasterWorkbench 5_"（旧版带空格）、"MasterWorkbench.5_"（GitHub API 空格转点）、"MasterWorkbench5_"（上传去空格）
+/// "MasterWorkbench_5.0.232_x64-setup.exe"  → "5.0.232"
 /// "MasterWorkbench5_5.0.229_x64-setup.exe"  → "5.0.229"
 /// "MasterWorkbench.5_5.0.273_x64-setup.exe" → "5.0.273"
-/// "MasterWorkbench_5.0.199_x64-setup.exe"   → "5.0.199"
 fn extract_version(filename: &str) -> Option<String> {
     let after_prefix = filename
-        .strip_prefix("MasterWorkbench 5_")
+        .strip_prefix("MasterWorkbench_")
+        .or_else(|| filename.strip_prefix("MasterWorkbench 5_"))
         .or_else(|| filename.strip_prefix("MasterWorkbench.5_"))
-        .or_else(|| filename.strip_prefix("MasterWorkbench5_"))
-        .or_else(|| filename.strip_prefix("MasterWorkbench_"))?;
+        .or_else(|| filename.strip_prefix("MasterWorkbench5_"))?;
     let version_str = after_prefix.strip_suffix("_x64-setup.exe")?;
     // 校验：至少三段数字 x.y.z
     let parts: Vec<&str> = version_str.split('.').collect();
@@ -309,7 +308,7 @@ async fn download_update(
 
     let temp_dir = std::env::temp_dir();
     let filename = if download_url.contains("/releases/assets/") {
-        "MasterWorkbench5_update.exe"
+        "MasterWorkbench_update.exe"
     } else {
         download_url.rsplit('/').next().unwrap_or("update.exe")
     };

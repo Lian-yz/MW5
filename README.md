@@ -1,12 +1,12 @@
 <div align="center">
 
-# MasterWorkbench 5
+# MasterWorkbench
 
-### 硕士全维度成长工作台
+### 研究生全维度成长工作台
 
 输入 → 执行 → 复盘 → 激励，四维闭环的个人成长管理系统
 
-[![Version](https://img.shields.io/badge/version-5.0.265-blue)](https://github.com/ThirteenLeef/Master-Workbench/releases)
+[![Version](https://img.shields.io/badge/version-5.0.265-blue)](https://github.com/Lian-yz/MW5/releases)
 [![Tauri](https://img.shields.io/badge/Tauri-2.x-orange)](https://tauri.app)
 [![Vue](https://img.shields.io/badge/Vue-3-brightgreen)](https://vuejs.org)
 
@@ -18,7 +18,7 @@ Windows 桌面应用 · 数据全本地存储 · 零后端零云端
 
 ## 软件简介
 
-**硕士工作台**是一款面向硕士研究生（及科研工作者）的全维度个人成长管理工作台。它围绕「输入 → 执行 → 复盘 → 激励」四维闭环设计，将科研、学习、规划、生活管理整合到一个桌面应用中。
+**研究生工作台**是一款面向研究生（及科研工作者）的全维度个人成长管理工作台。它围绕「输入 → 执行 → 复盘 → 激励」四维闭环设计，将科研、学习、规划、生活管理整合到一个桌面应用中。
 
 核心理念：
 
@@ -128,7 +128,7 @@ Windows 桌面应用 · 数据全本地存储 · 零后端零云端
 ## 项目结构
 
 ```
-Master-Workbench/
+MasterWorkbench/
 ├── src/                          # 前端源码
 │   ├── main.js                   # 应用入口
 │   ├── App.vue                   # 根组件（侧边栏、平台文档、版本播种）
@@ -223,8 +223,8 @@ Master-Workbench/
 ### 安装依赖
 
 ```bash
-git clone https://github.com/ThirteenLeef/Master-Workbench.git
-cd Master-Workbench
+git clone https://github.com/Lian-yz/MW5.git
+cd MW5
 npm install
 ```
 
@@ -250,9 +250,9 @@ npx tauri build
 
 ### 下载安装
 
-前往 [Releases 页面](https://github.com/ThirteenLeef/Master-Workbench/releases) 下载最新版安装包：
+前往 [Releases 页面](https://github.com/Lian-yz/MW5/releases) 下载最新版安装包：
 
-- `MasterWorkbench5_5.0.X_x64-setup.exe` — Windows 安装包
+- `MasterWorkbench_5.0.X_x64-setup.exe` — Windows 安装包
 - `source-5.0.X.zip` — 完整源码包
 
 ---
@@ -316,11 +316,11 @@ npx tauri build
 
 ## 关于
 
-Copyright &copy; 2026 惟创科技. All Rights Reserved.
+Copyright &copy; 2026 牛马科技. All Rights Reserved.
 
 本项目为个人学习与科研用途开发，源代码仅供学习参考。
 
-如需二次开发，请前往 [Releases](https://github.com/ThirteenLeef/Master-Workbench/releases) 下载源码包，解压后执行：
+如需二次开发，请前往 [Releases](https://github.com/Lian-yz/MW5/releases) 下载源码包，解压后执行：
 
 ```bash
 npm install

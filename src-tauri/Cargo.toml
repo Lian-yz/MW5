@@ -1,8 +1,8 @@
 [package]
 name = "masters-workbench"
 version = "5.0.281"
-description = "MasterWorkbench 5 - Windows 桌面端 (Tauri)"
-authors = ["FlyAutumn"]
+description = "MasterWorkbench - Windows 桌面端 (Tauri)"
+authors = ["Lian-yz"]
 edition = "2021"
 
 [build-dependencies]

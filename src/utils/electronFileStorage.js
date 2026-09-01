@@ -99,7 +99,7 @@ async function _ensureDirs(base) {
 async function _writeMeta(base) {
   const api = _api()
   await api.writeFile(_join(base, META_FILE), JSON.stringify({
-    app: '硕士工作台',
+    app: '研究生工作台',
     version: APP_VERSION_TAG,
     lastSync: new Date().toISOString(),
     storageVersion: 2,
@@ -240,7 +240,7 @@ export async function writeAutoBackup(data) {
   const ts = new Date().toISOString().replace(/[:.]/g, '-').slice(0, 19)
   const fn = `auto_backup_${ts}.json`
   const fp = _join(bp, fn)
-  const r = await api.writeFile(fp, JSON.stringify({ app: '硕士工作台', version: APP_VERSION_TAG, exportedAt: new Date().toISOString(), dataCount: Object.keys(data).length, data }, null, 2))
+  const r = await api.writeFile(fp, JSON.stringify({ app: '研究生工作台', version: APP_VERSION_TAG, exportedAt: new Date().toISOString(), dataCount: Object.keys(data).length, data }, null, 2))
   if (r.ok) {
     // 清理旧备份
     const lr = await api.listDir(bp)

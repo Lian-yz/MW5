@@ -1,7 +1,7 @@
 {
-  "name": "硕士工作台",
+  "name": "研究生工作台",
   "short_name": "工作台",
-  "description": "硕士全维度成长工作台 — 任务、计划、仿真、论文一站式管理",
+  "description": "研究生全维度成长工作台 — 任务、计划、仿真、论文一站式管理",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

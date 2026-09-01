@@ -14,7 +14,7 @@
 import { isTauriRuntime, getDefaultDataDir, pickFolderWithTauri } from './tauriFs'
 import { readFile, writeFile, exists, remove, mkdir } from '@tauri-apps/plugin-fs'
 
-const DB_NAME = '硕士工作台_SimImageStorage'
+const DB_NAME = '研究生工作台_SimImageStorage'
 const DB_VERSION = 1
 const STORE_NAME = 'simImages'
 // Tauri 环境图片目录路径的 localStorage key

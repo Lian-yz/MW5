@@ -1,5 +1,5 @@
 /**
- * Electron 主进程 — 硕士工作台桌面版
+ * Electron 主进程 — 研究生工作台桌面版
  *
  * 混合模式：exe 壳 + 云端页面
  * - 页面内容从 CloudStudio 加载，更新代码 = 云端重新部署
@@ -21,7 +21,7 @@ function createWindow() {
     height: 900,
     minWidth: 1024,
     minHeight: 700,
-    title: '硕士工作台',
+    title: '研究生工作台',
     icon: path.join(__dirname, 'icon.png'),
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),

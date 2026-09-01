@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "MasterWorkbench 5",
+  "productName": "MasterWorkbench",
   "version": "5.0.281",
   "identifier": "com.mastersworkbench.app",
   "build": {
@@ -12,7 +12,7 @@
   "app": {
     "windows": [
       {
-        "title": "MasterWorkbench 5",
+        "title": "MasterWorkbench",
         "width": 1400,
         "height": 900,
         "minWidth": 1024,
@@ -29,8 +29,8 @@
     "active": true,
     "targets": ["nsis"],
     "icon": ["icons/icon.ico", "icons/icon.png"],
-    "shortDescription": "MasterWorkbench 5",
-    "longDescription": "MasterWorkbench 5 - 个人效率平台桌面端",
+    "shortDescription": "MasterWorkbench",
+    "longDescription": "MasterWorkbench - 个人效率平台桌面端",
     "resources": ["WebView2Loader.dll"],
     "externalBin": [],
     "windows": {

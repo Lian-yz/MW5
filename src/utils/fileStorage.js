@@ -28,7 +28,7 @@
 
 import { isTauriRuntime, createTauriDirHandle, pickFolderWithTauri, getDefaultDataDir, TAURI_ROOT_KEY, TAURI_BACKUP_KEY } from './tauriFs'
 
-const DB_NAME = '硕士工作台_FileStorage'
+const DB_NAME = '研究生工作台_FileStorage'
 const DB_VERSION = 1
 const STORE_NAME = 'handles'
 const HANDLE_KEY = 'directoryHandle'
@@ -251,7 +251,7 @@ async function writeMeta() {
     const handle = await dirHandle.getFileHandle(META_FILE, { create: true })
     const writable = await handle.createWritable()
     await writable.write(JSON.stringify({
-      app: '硕士工作台',
+      app: '研究生工作台',
       version: APP_VERSION_TAG,
       lastSync: new Date().toISOString(),
       storageVersion: 2,
@@ -696,7 +696,7 @@ export async function writeAutoBackup(data) {
     const fileHandle = await backupDirHandle.getFileHandle(fileName, { create: true })
     const writable = await fileHandle.createWritable()
     await writable.write(JSON.stringify({
-      app: '硕士工作台',
+      app: '研究生工作台',
       version: APP_VERSION_TAG,
       exportedAt: new Date().toISOString(),
       dataCount: Object.keys(data).length,
@@ -767,7 +767,7 @@ export async function writeMainBackup(data, kind = 'auto', label = '') {
     const fileHandle = await backupsDir.getFileHandle(fileName, { create: true })
     const writable = await fileHandle.createWritable()
     await writable.write(JSON.stringify({
-      app: '硕士工作台',
+      app: '研究生工作台',
       kind,
       label: label || '',
       version: APP_VERSION_TAG,

@@ -1,5 +1,5 @@
 /**
- * 硕士工作台 - 本地桥接服务
+ * 研究生工作台 - 本地桥接服务
  * =========================
  * 作用：让网页端（浏览器）能够调用本地软件打开 PDF 文件。
  * 原理：浏览器出于安全限制不能直接启动本地程序，但可以访问
@@ -425,7 +425,7 @@ const server = http.createServer((req, res) => {
 if (require.main === module) {
   server.listen(PORT, HOST, () => {
     console.log('========================================')
-    console.log('硕士工作台 · 本地桥接服务已启动')
+    console.log('研究生工作台 · 本地桥接服务已启动')
     console.log('地址: http://' + HOST + ':' + PORT)
     console.log('PDF 保存目录: ' + SAVE_DIR)
     console.log('（如需自定义目录：在平台设置页保存，或编辑本目录 bridge-config.json）')

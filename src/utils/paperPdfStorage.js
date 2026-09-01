@@ -11,7 +11,7 @@
 import { isTauriRuntime, pickFolderWithTauri, getDefaultDataDir } from './tauriFs'
 import { readFile, writeFile, exists, remove, mkdir } from '@tauri-apps/plugin-fs'
 
-const DB_NAME = '硕士工作台_PaperPdfStorage'
+const DB_NAME = '研究生工作台_PaperPdfStorage'
 const DB_VERSION = 2
 const STORE_NAME = 'handles'
 const BLOB_STORE = 'pdfBlobs'

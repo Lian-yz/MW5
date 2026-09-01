@@ -37,8 +37,8 @@ if (!token) {
   process.exit(1)
 }
 
-const owner = 'ThirteenLeef'
-const repo = 'Master-Workbench'
+const owner = 'Lian-yz'
+const repo = 'MW5'
 const releaseName = `Workbench ${version}`
 
 const payload = JSON.stringify({
@@ -58,7 +58,7 @@ const options = {
     'Accept': 'application/vnd.github+json',
     'Authorization': `Bearer ${token}`,
     'X-GitHub-Api-Version': '2022-11-28',
-    'User-Agent': 'Master-Workbench-Release-Script',
+    'User-Agent': 'MasterWorkbench-Release-Script',
     'Content-Type': 'application/json',
     'Content-Length': Buffer.byteLength(payload),
   },
@@ -81,7 +81,7 @@ const req = https.request(options, (res) => {
           'Accept': 'application/vnd.github+json',
           'Authorization': `Bearer ${token}`,
           'X-GitHub-Api-Version': '2022-11-28',
-          'User-Agent': 'Master-Workbench-Release-Script',
+          'User-Agent': 'MasterWorkbench-Release-Script',
         },
       }
       const getReq = https.request(getOptions, (getRes) => {

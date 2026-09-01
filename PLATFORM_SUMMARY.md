@@ -1,4 +1,4 @@
-# 硕士研究生工作管理平台 — 完整架构与代码说明
+# 研究生工作管理平台 — 完整架构与代码说明
 
 > 版本：v5.0.141 | 构建于 2026-08-11 | 共 ~19,600 行代码
 
@@ -6,7 +6,7 @@
 
 ## 一、平台定位
 
-纯前端单页应用（SPA），面向硕士研究生的全维度个人成长管理工具。零后端、零数据库，所有数据存储在用户本机（localStorage + 可选 File System Access API 文件夹），不上传云端。
+纯前端单页应用（SPA），面向研究生的全维度个人成长管理工具。零后端、零数据库，所有数据存储在用户本机（localStorage + 可选 File System Access API 文件夹），不上传云端。
 
 **核心设计原则：**
 - **本地优先、零后端** — 隐私可控、断网可用
@@ -20,7 +20,7 @@
 ## 二、项目结构总览
 
 ```
-硕士工作台/
+研究生工作台/
 ├── index.html                     # SPA 入口
 ├── package.json                   # 依赖 (vue3/vite5/pinia2/echarts5/dayjs/katex)
 ├── vite.config.js                 # 构建配置：端口 5173
@@ -136,7 +136,7 @@ id, seq, code, subject, startTime, status, linkedPlanId, notes
 ## 七、本地开发
 
 ```bash
-cd 硕士工作台/
+cd 研究生工作台/
 npm install        # 安装依赖
 npm run dev        # 开发服务器 (localhost:5173)
 npm run build      # 构建生产版本到 dist/
@@ -171,4 +171,4 @@ npm run preview    # 预览构建产物
 
 ---
 
-*Copyright © 2026 惟创科技 All Rights Reserved*
+*Copyright © 2026 牛马科技 All Rights Reserved*

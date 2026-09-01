@@ -1,5 +1,5 @@
 /**
- * Service Worker — 硕士工作台 PWA 离线缓存
+ * Service Worker — 研究生工作台 PWA 离线缓存
  *
  * 策略：
  * - 导航请求（打开 App）：网络优先，离线时回退到缓存的首页

@@ -7,8 +7,8 @@
     <div class="login-page-mask"></div>
     <div class="login-card">
       <div class="login-header">
-        <img class="login-logo-img" src="/hean-logo.png" alt="和安HEAN" />
-        <h1>硕士研究生工作平台</h1>
+        <img class="login-logo-img" src="/hean-logo.png" alt="牛马科技" />
+        <h1>研究生工作平台</h1>
         <p class="login-subtitle">登录以继续</p>
       </div>
       <form class="login-form" @submit.prevent="doLogin">
@@ -102,7 +102,7 @@ onMounted(() => {
 
 function doLogin() {
   if (!username.value || !password.value) return
-  if (username.value === 'FlyAutumn' && password.value === 'FlyAutumn666') {
+  if (username.value === 'Lian-yz' && password.value === 'Lian-yz666') {
     // 登录成功：按勾选状态保存
     try {
       if (rememberAccount.value) {
@@ -116,7 +116,7 @@ function doLogin() {
         localStorage.removeItem(K_PASS)
       }
     } catch {}
-    settingsStore.login('FlyAutumn')
+    settingsStore.login('Lian-yz')
   } else {
     errorMsg.value = '账号或密码错误，请重试'
     password.value = ''

@@ -99,7 +99,7 @@ export function downloadBackup() {
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
     a.href = url
-    a.download = `硕士工作台_手动导出_${new Date().toISOString().slice(0, 10)}.json`
+    a.download = `研究生工作台_手动导出_${new Date().toISOString().slice(0, 10)}.json`
     document.body.appendChild(a)
     a.click()
     document.body.removeChild(a)
@@ -110,7 +110,7 @@ export function downloadBackup() {
   const url = URL.createObjectURL(blob)
   const a = document.createElement('a')
   a.href = url
-  a.download = `硕士工作台_自动备份_${new Date().toISOString().slice(0, 10)}.json`
+  a.download = `研究生工作台_自动备份_${new Date().toISOString().slice(0, 10)}.json`
   document.body.appendChild(a)
   a.click()
   document.body.removeChild(a)

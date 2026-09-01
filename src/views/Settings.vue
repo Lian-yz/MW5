@@ -1218,7 +1218,7 @@ const bridgeBatUrl = computed(() => {
 // 数据管理
 async function exportData() {
   const data = settingsStore.exportAllData()
-  const filename = `硕士工作台_备份_${new Date().toISOString().slice(0, 10)}.json`
+  const filename = `研究生工作台_备份_${new Date().toISOString().slice(0, 10)}.json`
   const path = await saveTextToFile(filename, JSON.stringify(data, null, 2), 'application/json')
   const detail = data.detail || { totalModules: 0, totalSize: 0, modules: [] }
   exportResult.value = { ...detail, filename, savedPath: path || '', exportedAt: data.exportedAt }

@@ -22,8 +22,8 @@
       </nav>
       <!-- 底部：Logo + 版本号（悬浮岛式时隐藏，移至顶部状态栏） -->
       <div class="sidebar-bottom-brand" v-if="!isFloatingNav">
-        <img class="sidebar-logo" src="/hean-logo.png" alt="HEAN" />
-        <span class="sidebar-brand-text">惟创科技</span>
+        <img class="sidebar-logo" src="/hean-logo.png" alt="牛马科技" />
+        <span class="sidebar-brand-text">牛马科技</span>
         <span class="sidebar-version" :class="{ clickable: isTauri }" @click="isTauri && manualCheckUpdate()" :title="isTauri ? '检查更新' : ''">Version：{{ settingsStore.appVersion }}</span>
       </div>
     </aside>
@@ -32,15 +32,15 @@
     <main class="main-content" v-if="settingsStore.isLoggedIn" :style="{ '--sub-nav-opacity': settingsStore.subNavOpacity, '--module-opacity': settingsStore.moduleOpacity, '--topbar-opacity': settingsStore.topBarOpacity }">
       <!-- 顶部状态栏 -->
       <header class="top-bar" :class="{ 'has-floating-brand': isFloatingNav || isMergeNav }" data-tauri-drag-region @mousedown="onTitlebarDragStart">
-        <span v-if="isFloatingNav || isMergeNav" class="topbar-brand" @click="$router.push('/')" title="惟创科技">
-          <img class="topbar-logo" src="/hean-logo.png" alt="HEAN" />
+        <span v-if="isFloatingNav || isMergeNav" class="topbar-brand" @click="$router.push('/')" title="牛马科技">
+          <img class="topbar-logo" src="/hean-logo.png" alt="牛马科技" />
           <span class="topbar-brand-side">
-            <span class="topbar-brand-text">惟创科技</span>
+            <span class="topbar-brand-text">牛马科技</span>
             <span class="topbar-version" :class="{ clickable: isTauri }" @click.stop="isTauri && manualCheckUpdate()" :title="isTauri ? '检查更新' : ''">v{{ settingsStore.appVersion }}</span>
           </span>
         </span>
         <div class="top-bar-left" data-tauri-drag-region>
-          <span class="top-bar-title" data-tauri-drag-region>硕士研究生工作平台</span>
+          <span class="top-bar-title" data-tauri-drag-region>研究生工作平台</span>
         </div>
         <div class="top-bar-right">
           <div class="date-area" @click="toggleDatePicker" title="点击自定义日期和周数">
@@ -379,10 +379,10 @@
         <div class="about-logo-wrap">
           <img src="/hean-logo.png" alt="平台 LOGO" class="about-logo-img" />
         </div>
-        <h3 class="about-title">硕士研究生工作管理平台</h3>
+        <h3 class="about-title">研究生工作管理平台</h3>
         <p class="about-version">Version:{{ settingsStore.appVersion }}</p>
         <div class="about-body">
-          <p class="about-desc">一款面向硕士研究生的全维度个人成长管理工具，覆盖科研、计划、文献、健康、财务与人际等维度，帮助你以「输入 → 执行 → 复盘 → 激励」的闭环持续精进。</p>
+          <p class="about-desc">一款面向研究生的全维度个人成长管理工具，覆盖科研、计划、文献、健康、财务与人际等维度，帮助你以「输入 → 执行 → 复盘 → 激励」的闭环持续精进。</p>
           <div class="about-features">
             <div class="about-feature"><span class="about-feature-icon"><AppIcon name="book" /> </span><span>科研中心 · 论文管理 · 组会纪要</span></div>
             <div class="about-feature"><span class="about-feature-icon"><AppIcon name="calendar" /> </span><span>计划中心 · 日历视图 · 任务看板</span></div>
@@ -396,7 +396,7 @@
           <button v-if="isTauri" class="btn btn-secondary" @click="showAboutModal = false; manualCheckUpdate()"><AppIcon name="download-cloud" />  检查更新</button>
         </div>
         <div class="about-footer">
-          <span>Copyright©2026 惟创科技 ALL Rights Reserved</span>
+          <span>Copyright©2026 牛马科技 ALL Rights Reserved</span>
         </div>
       </div>
     </div>
@@ -406,7 +406,7 @@
       <div class="about-modal platform-doc-modal">
         <button class="soft-btn-close modal-close-corner" @click="closePlatformDoc" title="关闭"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
         <h3 class="about-title"><AppIcon name="book" />  平台文档 · 使用与接手手册</h3>
-        <p class="about-version">硕士研究生工作管理平台 · Version:{{ settingsStore.appVersion }} · 共 14 章，涵盖架构、数据、主题、安全、开发与部署</p>
+        <p class="about-version">研究生工作管理平台 · Version:{{ settingsStore.appVersion }} · 共 14 章，涵盖架构、数据、主题、安全、开发与部署</p>
         <p class="about-version" style="margin-top: 2px; color: var(--color-text-tertiary); font-size: 12px;">文档最新修改时间：{{ platformDocUpdatedAt }}</p>
         <div class="doc-toolbar">
           <button class="btn btn-sm btn-secondary" @click="exportDocHtml" title="导出为 HTML 文件"><AppIcon name="file-text" />  导出 HTML</button>
@@ -427,7 +427,7 @@
           <div class="about-body platform-doc-body" ref="platformDocBodyRef">
           <section id="doc-sec-1" class="doc-section">
             <h4>一、平台定位与设计理念</h4>
-            <p>硕士研究生工作管理平台（MasterWorkbench 5）是一款面向硕士研究生群体的全维度个人成长管理工具，围绕「输入 → 执行 → 复盘 → 激励」的成长闭环设计，帮助用户统筹科研、计划、文献、健康、财务与人际关系，实现研究生生涯的精细化管理。</p>
+            <p>研究生工作管理平台（MasterWorkbench）是一款面向研究生群体的全维度个人成长管理工具，围绕「输入 → 执行 → 复盘 → 激励」的成长闭环设计，帮助用户统筹科研、计划、文献、健康、财务与人际关系，实现研究生生涯的精细化管理。</p>
             <p style="margin-top: 8px;">平台同时提供<strong>桌面端</strong>与<strong>浏览器端</strong>两种运行形态，二者共享同一套 Vue 3 前端代码，通过 <code>isTauriRuntime()</code> 在运行时自动区分环境并切换底层能力（详见第二章与第十一章）。</p>
             <p style="margin-top: 8px;"><strong>三条核心设计原则（二次开发时请务必遵循）：</strong></p>
             <ul>
@@ -459,7 +459,7 @@
           </section>
           <section id="doc-sec-3" class="doc-section">
             <h4>三、源码目录结构</h4>
-            <pre style="background: var(--color-bg); padding: 10px; border-radius: var(--radius-md); font-size: 12px; line-height: 1.6; overflow-x: auto;">硕士工作台/
+            <pre style="background: var(--color-bg); padding: 10px; border-radius: var(--radius-md); font-size: 12px; line-height: 1.6; overflow-x: auto;">研究生工作台/
   ├── index.html                 # SPA 入口 HTML（浏览器标签标题在此设置）
   ├── package.json               # 依赖与 npm 脚本（dev / build / preview）
   ├── vite.config.js             # Vite 配置：端口 5173、自动导出中间件
@@ -635,7 +635,7 @@ npx tauri build  # 桌面端生产构建，生成 NSIS 安装包</pre>
             <h4>十、构建与部署</h4>
             <p>平台支持两种构建方式，分别面向桌面端与浏览器端：</p>
             <ul>
-              <li><strong>桌面端构建（主要发布渠道）：</strong>执行 <code>npx tauri build</code>，Tauri 会先调用 Vite 构建前端（端口 5174，输出到 <code>dist_tauri</code>），再编译 Rust 后端并打包为 NSIS 安装包。产物位于 <code>src-tauri/target/release/bundle/nsis/</code>，安装包约 7 MB。安装包命名格式为 <code>MasterWorkbench5_5.0.X_x64-setup.exe</code>（无空格前缀）。窗口配置：1400×900 默认尺寸，最小 1024×700，无边框窗口，安装方式为 currentUser，界面语言简体中文。</li>
+              <li><strong>桌面端构建（主要发布渠道）：</strong>执行 <code>npx tauri build</code>，Tauri 会先调用 Vite 构建前端（端口 5174，输出到 <code>dist_tauri</code>），再编译 Rust 后端并打包为 NSIS 安装包。产物位于 <code>src-tauri/target/release/bundle/nsis/</code>，安装包约 7 MB。安装包命名格式为 <code>MasterWorkbench_5.0.X_x64-setup.exe</code>（无空格前缀）。窗口配置：1400×900 默认尺寸，最小 1024×700，无边框窗口，安装方式为 currentUser，界面语言简体中文。</li>
               <li><strong>桌面端发布流程：</strong>构建 → 复制安装包并重命名 → 创建 GitHub Release → 上传安装包。桌面端内置自动更新功能（Rust 端 <code>check_for_update</code> / <code>download_update</code> / <code>install_update</code> 三步），通过 GitHub Releases API 检查新版本并流式下载安装包，下载进度通过 <code>download-progress</code> 事件实时推送到前端。</li>
               <li><strong>浏览器端构建：</strong>执行 <code>npm run build</code>，产物在 <code>dist/</code>，可托管在任意静态服务器上。由于使用 hash 路由，<strong>无需为服务器配置 History 回退规则</strong>。</li>
               <li><strong>本机开发使用：</strong>可直接 <code>npm run dev</code>（浏览器端）或 <code>npx tauri dev</code>（桌面端）常驻使用，开发服务器支持全部功能。</li>
@@ -1186,7 +1186,7 @@ let docMutationObserver = null
 
 function buildDocExportHtml() {
   const body = platformDocBodyRef.value
-  const title = '硕士研究生工作管理平台 · 使用与接手手册'
+  const title = '研究生工作管理平台 · 使用与接手手册'
   const sections = body ? body.innerHTML : ''
   return `<!DOCTYPE html>
 <html lang="zh-CN">
@@ -1216,7 +1216,7 @@ ${sections}
 
 function exportDocHtml() {
   const html = buildDocExportHtml()
-  saveTextToFile(`硕士工作台_平台文档_${settingsStore.appVersion}.html`, html, 'text/html;charset=utf-8')
+  saveTextToFile(`研究生工作台_平台文档_${settingsStore.appVersion}.html`, html, 'text/html;charset=utf-8')
 }
 
 function exportDocPdf() {
@@ -1484,7 +1484,7 @@ const currentRouteTitle = computed(() => {
   const r = mainRoutes.value.find(r => r.path === route.path)
   if (r) return r.meta.title
   if (route.path === '/settings') return '平台设置'
-  return '硕士工作台'
+  return '研究生工作台'
 })
 
 const currentDateStr = computed(() => {
@@ -2122,7 +2122,7 @@ onMounted(async () => {
     settingsStore.addChangelog('2.1.115', '修复云端页面无限刷新严重BUG（根因：每次加载从文件同步到localStorage后无条件reload导致死循环）；优化页面加载时不再自动同步文件数据（save()本身就是双写，无需回灌）')
   }
   if (!versions.includes('2.2.117')) {
-    settingsStore.addChangelog('2.2.117', '个人信息独立页面（头像下拉菜单→个人信息跳转独立页面，不再混在后台管理中）；后台管理精简布局（移除登录人员管理模块，其余卡片合理排列减少空白）；侧边栏固定模式重构（仅两种状态：常驻全部显示/常驻仅图标，取消悬停展开交互）；侧边栏底部新增「惟创科技」品牌文字（宋体居中）；状态栏时间/周数/头像左移优化，头像下拉菜单居中显示')
+    settingsStore.addChangelog('2.2.117', '个人信息独立页面（头像下拉菜单→个人信息跳转独立页面，不再混在后台管理中）；后台管理精简布局（移除登录人员管理模块，其余卡片合理排列减少空白）；侧边栏固定模式重构（仅两种状态：常驻全部显示/常驻仅图标，取消悬停展开交互）；侧边栏底部新增「牛马科技」品牌文字（宋体居中）；状态栏时间/周数/头像左移优化，头像下拉菜单居中显示')
   }
   if (!versions.includes('2.2.118')) {
     settingsStore.addChangelog('2.2.118', '头像下拉菜单选项文字居中；后台管理模块重排；左侧导航栏6个选项垂直居中')
@@ -2757,7 +2757,7 @@ onMounted(async () => {
   settingsStore.ensureAppVersion('5.0.259')
   if (!versions.includes('5.0.259')) {
     settingsStore.addChangelog('5.0.259',
-      '• <AppIcon name="layout-dashboard" />  修复融合态导航模式下顶部状态栏左侧不显示 Logo、惟创科技、版本号的问题（品牌区扩展至融合态模式显示）',
+      '• <AppIcon name="layout-dashboard" />  修复融合态导航模式下顶部状态栏左侧不显示 Logo、牛马科技、版本号的问题（品牌区扩展至融合态模式显示）',
       '2026-08-27 21:40'
     )
   }
@@ -2984,7 +2984,7 @@ onMounted(async () => {
   settingsStore.ensureAppVersion('5.0.230')
   if (!versions.includes('5.0.230')) {
     settingsStore.addChangelog('5.0.230',
-      '• <AppIcon name="refresh-cw" />  修复检查更新失效：兼容无空格安装包文件名前缀 MasterWorkbench5_ 的版本号提取\n' +
+      '• <AppIcon name="refresh-cw" />  修复检查更新失效：兼容无空格安装包文件名前缀 MasterWorkbench_ 的版本号提取\n' +
       '• <AppIcon name="list-ordered" />  计划库列表排序优化：进行中置顶、已完成置底、其他状态居中，各组内按结束时间升序',
       '2026-08-25 15:10'
     )
@@ -3006,7 +3006,7 @@ onMounted(async () => {
   settingsStore.ensureAppVersion('5.0.227')
   if (!versions.includes('5.0.227')) {
     settingsStore.addChangelog('5.0.227',
-      '• <AppIcon name="app-window" />  桌面快捷方式名称和 Windows 软件目录名称统一为 MasterWorkbench 5',
+      '• <AppIcon name="app-window" />  桌面快捷方式名称和 Windows 软件目录名称统一为 MasterWorkbench',
       '2026-08-25 11:00'
     )
   }
@@ -3127,7 +3127,7 @@ onMounted(async () => {
       '• <AppIcon name="palette" />  主题配色新增自定义渐变：可选择两个颜色组成渐变作为导航栏/状态栏背景\n' +
       '• <AppIcon name="image" />  新增页面背景图片功能：支持上传自定义图片作为平台背景，覆盖状态栏以下所有区域，可调节透明度\n' +
       '• <AppIcon name="layout" />  登录页优化：移除会话过期提示文字，账号/密码标签改为左右排列\n' +
-      '• <AppIcon name="align-center" />  悬浮岛模式品牌区调整：惟创科技文字相对版本号水平居中对齐',
+      '• <AppIcon name="align-center" />  悬浮岛模式品牌区调整：牛马科技文字相对版本号水平居中对齐',
       '2026-08-24 12:00'
     )
   }
@@ -3200,7 +3200,7 @@ onMounted(async () => {
   settingsStore.ensureAppVersion('5.0.205')
   if (!versions.includes('5.0.205')) {
     settingsStore.addChangelog('5.0.205',
-      '• <AppIcon name="layout-dashboard" />  顶部状态栏品牌区布局优化：版本号与"惟创科技"间距增大不再重叠，品牌区整体垂直居中；"硕士研究生工作平台"标题在所有模式下左右居中显示\n' +
+      '• <AppIcon name="layout-dashboard" />  顶部状态栏品牌区布局优化：版本号与"牛马科技"间距增大不再重叠，品牌区整体垂直居中；"研究生工作平台"标题在所有模式下左右居中显示\n' +
       '• <AppIcon name="home" />  导航栏"主页面"更名为"信息预览"\n' +
       '• <AppIcon name="align-horizontal-justify-center" />  仿真中心二级导航高度与其它页面统一对齐\n' +
       '• <AppIcon name="calendar" />  周数计算基准改为 2026年8月8日所在周为第 1 周，保留自定义周数功能\n' +
@@ -3216,7 +3216,7 @@ onMounted(async () => {
   if (!versions.includes('5.0.203')) {
     settingsStore.addChangelog('5.0.203',
       '• <AppIcon name="align-vertical-justify-center" />  悬浮岛式导航修复：顶部状态栏绝对定位导致二级页面（总览、仿真库等）被遮挡，已为内容区补充 56px 顶部留白\n' +
-      '• <AppIcon name="chevron-down" />  品牌区版本号下移，消除与"惟创科技"文字重叠',
+      '• <AppIcon name="chevron-down" />  品牌区版本号下移，消除与"牛马科技"文字重叠',
       '2026-08-23 23:30'
     )
   }
@@ -3224,7 +3224,7 @@ onMounted(async () => {
   if (!versions.includes('5.0.202')) {
     settingsStore.addChangelog('5.0.202',
       '• <AppIcon name="download" />  下载更新实时显示进度百分比，流式分块下载替代一次性内存读取\n' +
-      '• <AppIcon name="layout-dashboard" />  悬浮岛式导航布局修复：状态栏绝对定位横跨全宽，消除多余蓝色条；Logo 放大居最左、惟创科技在 Logo 下方、版本号在 Logo 右侧上下居中',
+      '• <AppIcon name="layout-dashboard" />  悬浮岛式导航布局修复：状态栏绝对定位横跨全宽，消除多余蓝色条；Logo 放大居最左、牛马科技在 Logo 下方、版本号在 Logo 右侧上下居中',
       '2026-08-23 23:00'
     )
   }
@@ -3232,7 +3232,7 @@ onMounted(async () => {
   if (!versions.includes('5.0.201build2')) {
     settingsStore.addChangelog('5.0.201build2',
       '• <AppIcon name="layout-dashboard" />  悬浮岛式导航视觉优化：侧边栏背景与主页面内容区融为一体，顶部占位条与状态栏同色无缝衔接\n' +
-      '• <AppIcon name="layout" />  品牌区调整：Logo 放大居最左，惟创科技文字缩小，版本号移至状态栏中央',
+      '• <AppIcon name="layout" />  品牌区调整：Logo 放大居最左，牛马科技文字缩小，版本号移至状态栏中央',
       '2026-08-23 22:00'
     )
   }
@@ -3240,7 +3240,7 @@ onMounted(async () => {
   if (!versions.includes('5.0.201')) {
     settingsStore.addChangelog('5.0.201',
       '• <AppIcon name="layout-dashboard" />  悬浮岛式导航布局优化：悬浮岛高度自适应 8 个导航项并垂直居中，四周留白更自然，卡片底色与内容区一致\n' +
-      '• <AppIcon name="layout" />  顶部状态栏品牌区调整：Logo 与版本号移至最左侧，惟创科技置于 Logo 下方',
+      '• <AppIcon name="layout" />  顶部状态栏品牌区调整：Logo 与版本号移至最左侧，牛马科技置于 Logo 下方',
       '2026-08-23 21:00'
     )
   }
@@ -3865,7 +3865,7 @@ onMounted(async () => {
   if (!versions.includes('5.0.100')) {
     settingsStore.addChangelog('5.0.100',
       '• <AppIcon name="plus-circle" />  大版本升级至 5.0.100\n' +
-      '• <AppIcon name="tag" />  浏览器标签标题简化为「硕士工作台」，并新增平台 LOGO（favicon）\n' +
+      '• <AppIcon name="tag" />  浏览器标签标题简化为「研究生工作台」，并新增平台 LOGO（favicon）\n' +
       '• <AppIcon name="file-text" />  科研中心新增「研究助手」子模块：选题收窄向导、文献综述模板、论文阶段流水线、引用自检清单\n' +
       '• <AppIcon name="message-square" />  导师应答助手新增学术专用场景：选题收窄、模拟审稿、数据来源质疑核查\n' +
       '• <AppIcon name="save" />  本地数据架构规范化：存储文件夹自动建立 data/attachments/backups/exports/ 子目录与 meta.json 元信息，并自动迁移旧版根目录数据\n' +
